@@ -28,7 +28,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4" v-for="disco in dischi" v-if="disco.genre.toLowerCase().includes(cerco_genere.toLowerCase())">
+                    <div class="col-lg-4 col-md-4" v-for="disco in ordino_array(dischi)"
+                         v-if="disco.genre.toLowerCase().includes(cerco_genere.toLowerCase())">
                         <div class="box-cd">
                             <div class="box-img">
                                 <img :src="disco.poster" :alt="disco.title">

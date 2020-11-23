@@ -12,17 +12,28 @@ var app = new Vue({
 
     methods: {
 
+        ordino_array(arr){
+            return arr.slice().sort((a, b) => parseInt(a.year)  - parseInt(b.year) );
+
+        }
     },
 
     mounted() {
 
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
              .then((risposta) => {
-                this.dischi = risposta.data.response
+                let ele = risposta.data.response
+
+                 for (let i = 0; i < ele.length ; i++) {
+                     var ele_corrente = ele[i];
+                     this.dischi.push(ele_corrente)
+                 }
             })
 
         this.load = true;
-    }
+        this.ordino_array();
+    },
+
 
 
 })
