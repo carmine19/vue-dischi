@@ -29,7 +29,7 @@
                             </div> -->
                             <select v-model="ordino_per_anni" class="select" name="">
                                 <option value="">Ordina per anni...</option>
-                                <option v-for="anno in dischi">{{anno.year}}</option>
+                                <option v-for="anno in ordino_array(dischi)">{{anno.year}}</option>
                             </select>
                         </div>
                     </div>
