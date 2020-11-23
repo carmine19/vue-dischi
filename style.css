@@ -4,13 +4,37 @@
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+}
+
 #app {
     background: #1D2D3C;
 }
 
-.container .logo img {
+.container .col-lg-12 .box-img img {
     width: 200px;
     margin:40px;
+}
+
+.container .col-lg-12 .bar-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.container .col-lg-12 .bar-search .input-box{
+    background: #fff;
+	border-radius: 20px;
+	padding: 5px 15px;
+    width: 30%;
+    text-align: center;
+}
+
+.container .col-lg-12 .bar-search .input-box .left-input{
+    border: none;
+    padding: 5px;
+
 }
 
 .container .box-cd {

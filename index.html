@@ -18,9 +18,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 logo text-center">
+                        <div class="box-img">
                             <img src="img/logorgb.png" alt="">
                         </div>
-                    <div class="col-lg-4 col-md-4" v-for="disco in dischi">
+                        <div class="bar-search">
+                            <div class="input-box">
+                                <i class="fas fa-search"></i>
+                                <input v-model="cerco_genere" type="text" placeholder="Cerca per genere..." class="left-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" v-for="disco in dischi" v-if="disco.genre.toLowerCase().includes(cerco_genere.toLowerCase())">
                         <div class="box-cd">
                             <div class="box-img">
                                 <img :src="disco.poster" :alt="disco.title">

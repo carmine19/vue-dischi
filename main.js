@@ -6,6 +6,7 @@ var app = new Vue({
     data: {
         load: false,
         dischi:[],
+        cerco_genere:'',
 
     },
 
