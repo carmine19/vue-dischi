@@ -6,7 +6,8 @@ var app = new Vue({
     data: {
         load: false,
         dischi:[],
-        cerco_genere:'',
+        //cerco_genere:'',
+        ordino_per_anni: '',
 
     },
 
@@ -31,7 +32,6 @@ var app = new Vue({
             })
 
         this.load = true;
-        this.ordino_array();
     },
 
 

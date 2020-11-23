@@ -8,8 +8,12 @@
     outline: none;
 }
 
+body {
+    background: #1D2D3C;;
+}
+
 #app {
-    background: #1D2D3C;
+    color: white;
 }
 
 .container .col-lg-12 .box-img img {
@@ -23,17 +27,18 @@
     margin-bottom: 30px;
 }
 
-.container .col-lg-12 .bar-search .input-box{
+.container .col-lg-12 .bar-search .input-box, .select{
     background: #fff;
 	border-radius: 20px;
 	padding: 5px 15px;
-    width: 30%;
+    width: 20%;
     text-align: center;
 }
 
-.container .col-lg-12 .bar-search .input-box .left-input{
+.container .col-lg-12 .bar-search .input-box .left-input, .select{
     border: none;
     padding: 5px;
+    text-align: center;
 
 }
 
