@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    background: #1D2D3C;
+}
+
+.container .logo img {
+    width: 200px;
+    margin:40px;
+}
+
+.container .box-cd {
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.container .box-cd .box-information {
+    margin-top: 20px;
+}
+
+.container .col-lg-4 .box-information .box-title h2 {
+    color: #880e4f;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.container img {
+    width: 100%;
+    border-radius: 8px;
+   -webkit-box-shadow: 1px 1px 15px -4px rgba(50,50,50,1);
+    -moz-box-shadow: 1px 1px 15px -4px rgba(50,50,50,1);
+    box-shadow: 1px 1px 15px -4px rgba(50,50,50,1);
+}
+
+
