@@ -6,8 +6,8 @@ var app = new Vue({
     data: {
         load: false,
         dischi:[],
-        //cerco_genere:'',
-        ordino_per_anni: '',
+        cerco_genere:'',
+        ordino_per_genere: [],
 
     },
 
@@ -23,12 +23,14 @@ var app = new Vue({
 
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
              .then((risposta) => {
-                let ele = risposta.data.response
+                this.dischi = risposta.data.response;
 
-                 for (let i = 0; i < ele.length ; i++) {
-                     var ele_corrente = ele[i];
-                     this.dischi.push(ele_corrente)
-                 }
+                this.dischi.forEach((item) => {
+                    if (!this.ordino_per_genere.includes(item.genre)) {
+                        this.ordino_per_genere.push(item.genre);
+                    }
+                });
+
             })
 
         this.load = true;

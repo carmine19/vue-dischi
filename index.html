@@ -27,13 +27,13 @@
                                 <i class="fas fa-search"></i>
                                 <input v-model="cerco_genere" type="text" placeholder="Cerca per genere..." class="left-input">
                             </div> -->
-                            <select v-model="ordino_per_anni" class="select" name="">
-                                <option value="">Ordina per anni...</option>
-                                <option v-for="anno in ordino_array(dischi)">{{anno.year}}</option>
+                            <select v-model="cerco_genere" class="select" name="">
+                                <option value="">Ordina per generi...</option>
+                                <option v-for="genre in ordino_per_genere">{{genre}}</option>
                             </select>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4" v-for="disco in ordino_array(dischi)" v-if="disco.year.toLowerCase().includes(ordino_per_anni.toLowerCase())" >
+                    <div class="col-lg-4 col-md-4" v-for="disco in ordino_array(dischi)" v-if="disco.genre.toLowerCase().includes(cerco_genere.toLowerCase())" >
                         <div class="box-cd">
                             <div class="box-img">
                                 <img :src="disco.poster" :alt="disco.title">
